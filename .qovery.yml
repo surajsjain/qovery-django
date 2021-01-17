@@ -1,0 +1,10 @@
+application:
+  name: my-first-django-on-qov
+  project: sample-proj
+  publicly_accessible: true
+routers:
+  - name: main
+    routes:
+      - application_name: sample-proj
+        paths:
+          - /

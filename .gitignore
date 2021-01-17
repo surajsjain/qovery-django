@@ -1,0 +1,11 @@
+*.sqlite3
+
+venv/
+idea/
+.idea/
+media/
+
+**/migrations
+**/__pycache__
+**/some_test.py
+**/weird.py
