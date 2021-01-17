@@ -1,10 +1,23 @@
+---
 application:
-  name: my-first-django-on-qov
-  project: sample-proj
-  publicly_accessible: true
+  name: "qovery-django"
+  project: "sample-proj"
+  organization: "QoveryCommunity"
+  storage:
+  - name: "sample-file-storage"
+    size: "70"
+    type: "ssd"
+    mount_point: "/mnt/sample-file-storage"
+databases:
+- type: "POSTGRESQL"
+  name: "sample-q-db"
+  version: "11"
+- type: "REDIS"
+  name: "sample-lol-redis"
+  version: "5"
 routers:
-  - name: main
-    routes:
-      - application_name: sample-proj
-        paths:
-          - /
+- name: "main-qovery-django"
+  routes:
+  - application_name: "qovery-django"
+    paths:
+    - "/*"
